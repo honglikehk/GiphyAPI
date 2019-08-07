@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>How do you feel today?</title>
+
+    <!-- Bootstrap CDN  -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+      <!-- favicon logo -->
+
+      <link
+      rel="icon"
+      href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/198/smiling-face-with-heart-shaped-eyes_1f60d.png"
+    />
+
+    <!-- Added link to the jQuery Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="assets/css/setup.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Crimson+Text|Libre+Caslon+Text|Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container text-center" id="rcorners"">
+      <h1>What am I feeling today?</h1>
+      <p><strong>Validate yourself with gifs, from the GIPHY API.</strong></p>
+      <!-- Rendered Buttons will get Dumped Here  -->
+      <div id="buttons-view"></div>
+
+      <form id="emotion-form">
+        <label for="emotion-input">Add an emotion:</label>
+        <input type="text" id="emotion-input" />
+
+           <!-- Button triggers new movie to be added -->
+           <input id="add-emotion" type="submit" value="Submit">
+        </form>
+        <!-- the area that shows the gifs -->
+        <div id="GIFArea"></div>
+    </div>
+
+          <!-- footer -->
+
+          <footer>
+                <p>copyright &copy; 2019 - Coded and Developed by Christine Hong</p>
+              </footer>
+    <!-- javascript file -->
+    <script src="javascript/request.js"></script>
+  </body>
+</html>

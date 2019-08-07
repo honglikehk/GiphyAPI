@@ -1,0 +1,44 @@
+button,
+div,
+form,
+input {
+  margin: 10px;
+}
+
+h1 {
+  font-family: "Libre Caslon Text", "Playfair Display", "Crimson Text", serif;
+  font-size: 3rem;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 15%;
+  padding: 2%;
+  margin-bottom: 10%;
+  min-height: calc(100vh - 70px);
+}
+
+.container h1,
+footer {
+  text-align: center;
+}
+
+footer p {
+  font-size: 0.8rem;
+}
+
+#rcorners {
+  border-radius: 25px;
+  border: 6px solid black;
+  margin-top: 10%;
+}
+
+/* .selection {
+  display: flex;
+  flex-direction: column;
+}
+
+.dynamicGame {
+  margin-top: 5%;
+} */
