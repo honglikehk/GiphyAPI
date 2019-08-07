@@ -1,6 +1,6 @@
 $(document).ready(function() {
   // Initial array of movies
-  var emotions = [
+  const emotions = [
     "Sad",
     "Mad",
     "Happy",
@@ -26,7 +26,7 @@ $(document).ready(function() {
         "&api_key=4nfHq8YkmeFlm6nHNmYviT4iZ4e3TfBx&limit=10";
 
       $.ajax({ url: queryURL, method: "GET" }).done(function(response) {
-        for (var i = 0; i < response.data.length; i++) {
+        for (let i = 0; i < response.data.length; i++) {
           $("#GIFArea").prepend("<p> Rating: " + response.data[i].rating);
           $("#GIFArea").prepend(
             "<img src='" + response.data[i].images.downsized.url + "'>"
@@ -41,8 +41,8 @@ $(document).ready(function() {
   function renderButtons() {
     $("#buttons-view").empty();
     // looping through the array of emotions
-    for (var i = 0; i < emotions.length; i++) {
-      var a = $("<button>");
+    for (let i = 0; i < emotions.length; i++) {
+      let a = $("<button>");
       a.addClass("emotion");
       a.attr("data-search", emotions[i]);
       a.text(emotions[i]);
