@@ -27,11 +27,16 @@ $(document).ready(function() {
 
       $.ajax({ url: queryURL, method: "GET" }).done(function(response) {
         for (let i = 0; i < response.data.length; i++) {
+          console.log(response);
           $("#GIFArea").prepend("<p> Rating: " + response.data[i].rating);
           $("#GIFArea").prepend(
-            "<img src='" + response.data[i].images.downsized.url + "'>"
+            "<img src='" + response.data[i].images.fixed_width_still.url + "'>"
             // response.data[i].images.480w_still.url
+            //images.downsized
           );
+          $("img").on("click", function() {
+            $("img").attr(src, "response.data[i].images.downsized.url");
+          });
         }
       });
     });
