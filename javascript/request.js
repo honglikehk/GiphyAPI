@@ -19,7 +19,6 @@ $(document).ready(function() {
   function createEmotionGifs() {
     $("button").on("click", function() {
       let x = $(this).data("search");
-      alert("yay");
 
       let queryURL =
         "https://api.giphy.com/v1/gifs/search?q=" +
@@ -28,8 +27,8 @@ $(document).ready(function() {
 
       $.ajax({ url: queryURL, method: "GET" }).done(function(response) {
         for (var i = 0; i < response.data.length; i++) {
-          $("#GIFArea").append("<p> Rating: " + response.data[i].rating);
-          $("#GIFArea").append(
+          $("#GIFArea").prepend("<p> Rating: " + response.data[i].rating);
+          $("#GIFArea").prepend(
             "<img src='" + response.data[i].images.downsized.url + "'>"
             // response.data[i].images.480w_still.url
           );
