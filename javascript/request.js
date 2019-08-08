@@ -30,13 +30,14 @@ $(document).ready(function() {
           console.log(response);
           $("#GIFArea").prepend("<p> Rating: " + response.data[i].rating);
           $("#GIFArea").prepend(
-            "<img src='" + response.data[i].images.fixed_width_still.url + "'>"
+            "<img src='" + response.data[i].images.downsized.url + "'>"
             // response.data[i].images.480w_still.url
             //images.downsized
+            //response.data[i].images.fixed_width_still.url
           );
-          $("img").on("click", function() {
-            $("img").attr(src, "response.data[i].images.downsized.url");
-          });
+          // $("img").on("click", function() {
+          //   $(this).attr("src", response.data[i].images.downsized.url);
+          // });
         }
       });
     });
